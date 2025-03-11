@@ -6,7 +6,7 @@ RUN apk add --no-cache git && git pull || true
 
 
 # Copy only the package.json and yarn.lock first to leverage Docker's cache
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # Install dependencies
 RUN yarn install --frozen-lockfile --network-timeout 1000000
