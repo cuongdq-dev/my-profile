@@ -1,0 +1,39 @@
+---
+const {
+  title,
+  company,
+  date,
+  description,
+  order = "normal",
+  delay = "0.2s",
+  number,
+} = Astro.props;
+---
+
+<div class="row mt-50">
+  <div class="col-lg-12">
+    <div
+      class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn"
+      data-wow-duration="1.3s"
+      data-wow-delay={delay}
+    >
+      <div
+        class={`experience_title ${order === "last" ? "order-last" : "text-lg-right"}`}
+      >
+        <h3 class="title">{title}</h3>
+        <p>{company}</p>
+        <span class="date">{date}</span>
+      </div>
+      <div class="experience_number">
+        <span>{number}</span>
+      </div>
+      <div
+        class={`experience_content ${order !== "first" ? "order-first" : ""}`}
+      >
+        <p>
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

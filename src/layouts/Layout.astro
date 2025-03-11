@@ -1,0 +1,104 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
+>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--====== Title ======-->
+    <title>Freelancer - CV and Portfolio Template</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+
+    <!--====== LineIcons CSS ======-->
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css" />
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="loader">
+        <div class="ytp-spinner">
+          <div class="ytp-spinner-container">
+            <div class="ytp-spinner-rotator">
+              <div class="ytp-spinner-left">
+                <div class="ytp-spinner-circle"></div>
+              </div>
+              <div class="ytp-spinner-right">
+                <div class="ytp-spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+
+    <!--====== Jquery js ======-->
+
+    <script type="text/javascript" src="/assets/js/vendor/jquery-1.12.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/vendor/modernizr-3.7.1.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+    <!--====== Slick js ======-->
+    <script type="text/javascript" src="/assets/js/slick.min.js"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script type="text/javascript" src="/assets/js/ajax-contact.js"></script>
+
+    <!--====== Appear js ======-->
+    <script type="text/javascript" src="/assets/js/jquery.appear.min.js"
+    ></script>
+
+    <!--====== Counter Up js ======-->
+    <script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.counterup.min.js"
+    ></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script type="text/javascript" src="/assets/js/jquery.easing.min.js"
+    ></script>
+    <script type="text/javascript" src="/assets/js/scrolling-nav.js"></script>
+
+    <!--====== wow js ======-->
+    <script type="text/javascript" src="/assets/js/wow.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+  </body>
+</html>
