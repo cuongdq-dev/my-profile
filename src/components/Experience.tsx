@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { defaultLang, getTranslation, ui } from "../utils/ui";
 export const Experience = () => {
   const [lang, setLang] = useState(defaultLang);
+  const experiences = ui[lang]?.["experience.items"] || [];
 
   useEffect(() => {
     const handleStorageChange = () => {
@@ -9,14 +10,23 @@ export const Experience = () => {
       setLang(newLang);
     };
 
+    const observer = new MutationObserver(handleStorageChange);
+    observer.observe(document, {
+      attributes: true,
+      childList: true,
+      subtree: true,
+    });
+
+    // Lắng nghe sự kiện storage khi thay đổi từ tab khác
     window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("languageChanged", handleStorageChange);
 
     return () => {
+      observer.disconnect();
       window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("languageChanged", handleStorageChange);
     };
   }, []);
-
-  const experiences = ui[lang]?.["experience.items"] || [];
   return (
     <section id="work" className="work_experience_area pt-115">
       <div className="container">
