@@ -31,10 +31,16 @@ import { getTranslation } from "../utils/ui";
 
             <div class="call_to_action_btn">
               <a
-                href="https://rebrand.ly/freelancer-ud"
+                target="_blank"
+                href={`mailto:${import.meta.env.EMAIL}`}
                 rel="nofollow"
-                data-i18n={getTranslation("contact.hire_me_btn")}
-                class="main-btn"></a>
+                class="main-btn"
+              >
+                <span data-i18n={getTranslation("contact.hire_me_btn")}> </span>
+                <span>
+                  <i class="ml-2 lni lni-envelope"></i>
+                </span>
+              </a>
             </div>
             <!-- call to action btn -->
           </div>

@@ -111,7 +111,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "counter.years_experience": "Years Experience",
     "experience.main_title": "Experience",
     "experience.sub_title": "Work Experience",
-    "footer.credit": "Template Designed and Developed by",
+    "footer.credit": "Designed and Developed by",
 
     "project.button": "All Works",
     "project.main_title": "Latest Projects",
