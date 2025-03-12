@@ -235,7 +235,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.items": [
       {
         title: "Company Internal Management System",
-        image: "/assets/images/project-1.jpg",
+        image: "/assets/images/project-company-admin.jpg",
         category: "Management System",
         description:
           "A system that supports attendance tracking, task assignment, internal messaging, and work progress monitoring.",
@@ -243,7 +243,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
       },
       {
         title: "Transportation Service",
-        image: "/assets/images/project-2.jpg",
+        image: "/assets/images/project-logistic.jpg",
         category: "Transportation & Logistics",
         description:
           "A system for managing transportation, order placement, cost calculation, and journey tracking.",
@@ -267,7 +267,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
       },
       {
         title: "Crawl Hot Trending",
-        image: "/assets/images/project-.jpg",
+        image: "/assets/images/project-crawl-trending.jpg",
         category: "Data & AI",
         description:
           "An automated system that collects trending information from multiple sources.",
@@ -454,7 +454,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.items": [
       {
         title: "Hệ thống quản lý nội bộ công ty",
-        image: "/assets/images/project-1.jpg",
+        image: "/assets/images/project-company-admin.jpg",
         category: "Hệ thống quản lý",
         description:
           "Quản lý nhân sự, chấm công, giao task, nhắn tin nội bộ và theo dõi tiến độ công việc.",
@@ -462,7 +462,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
       },
       {
         title: "Dịch vụ vận tải",
-        image: "/assets/images/project-2.jpg",
+        image: "/assets/images/project-logistic.jpg",
         category: "Vận tải & Logistics",
         description:
           "Hệ thống đặt đơn, theo dõi hành trình và tính toán chi phí vận chuyển.",
@@ -486,7 +486,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
       },
       {
         title: "Crawl hot trending",
-        image: "/assets/images/project-.jpg",
+        image: "/assets/images/project-crawl-trending.jpg",
         category: "Dữ liệu & AI",
         description: "Thu thập dữ liệu trending từ nhiều nguồn khác nhau.",
         link: "#",
