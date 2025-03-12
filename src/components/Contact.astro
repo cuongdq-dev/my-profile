@@ -1,5 +1,5 @@
 ---
-
+import { getTranslation } from "../utils/ui";
 ---
 
 <section id="contact" class="call_to_action_area">
@@ -15,18 +15,17 @@
             class="call_to_action_box d-md-flex justify-content-between align-items-center"
           >
             <div class="call_to_action_content">
-              <h3 class="action_title">
-                You are using free lite version of Freelancer
+              <h3
+                data-i18n={getTranslation("contact.action_title")}
+                class="action_title"
+              >
               </h3>
               <ul class="line">
                 <li></li>
                 <li></li>
                 <li></li>
               </ul>
-              <p>
-                Please, purchase full version to get all elements, features,
-                footer credit removal permission and commercial license
-              </p>
+              <p data-i18n={getTranslation("contact.description_title")}></p>
             </div>
             <!-- call to action content -->
 
@@ -34,8 +33,8 @@
               <a
                 href="https://rebrand.ly/freelancer-ud"
                 rel="nofollow"
-                class="main-btn">HIRE ME</a
-              >
+                data-i18n={getTranslation("contact.hire_me_btn")}
+                class="main-btn"></a>
             </div>
             <!-- call to action btn -->
           </div>

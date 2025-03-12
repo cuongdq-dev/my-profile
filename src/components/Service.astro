@@ -1,5 +1,5 @@
 ---
-
+import { getTranslation } from "../utils/ui";
 ---
 
 <section id="services" class="services_area pt-115 pb-120">
@@ -7,18 +7,24 @@
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="section_title text-center pb-30">
-          <h5 class="sub_title">Services</h5>
-          <h3 class="main_title">Service I Provide</h3>
+          <h5
+            data-i18n={getTranslation("services.sub_title")}
+            class="sub_title"
+          >
+          </h5>
+          <h3
+            data-i18n={getTranslation("services.main_title")}
+            class="main_title"
+          >
+          </h3>
           <ul class="line">
             <li></li>
             <li></li>
             <li></li>
           </ul>
         </div>
-        <!-- section title -->
       </div>
     </div>
-    <!-- row -->
 
     <div class="row">
       <div class="col-lg-4 col-sm-6">
@@ -31,11 +37,12 @@
             <i class="lni lni-code"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">Frontend Development</h4>
-            <p>
-              I build responsive, high-performance web applications using
-              React.js, Next.js, and TypeScript.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.frontend.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.frontend.description")}></p>
           </div>
         </div>
       </div>
@@ -50,11 +57,12 @@
             <i class="lni lni-codepen"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">Backend Development</h4>
-            <p>
-              Creating scalable backend solutions with Node.js, NestJS, RESTful
-              APIs, and database integration.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.backend.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.backend.description")}></p>
           </div>
         </div>
       </div>
@@ -69,11 +77,12 @@
             <i class="lni lni-layers"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">Full-stack Development</h4>
-            <p>
-              Combining frontend and backend expertise to deliver complete and
-              seamless web solutions.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.fullstack.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.fullstack.description")}></p>
           </div>
         </div>
       </div>
@@ -88,11 +97,12 @@
             <i class="lni lni-network"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">API Development & Integration</h4>
-            <p>
-              Design and develop reliable RESTful APIs and GraphQL for seamless
-              system integration.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.api.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.api.description")}></p>
           </div>
         </div>
       </div>
@@ -107,11 +117,12 @@
             <i class="lni lni-database"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">Database Management</h4>
-            <p>
-              Experienced in designing, implementing, and managing PostgreSQL,
-              MongoDB, and Redis databases.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.database.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.database.description")}></p>
           </div>
         </div>
       </div>
@@ -126,16 +137,15 @@
             <i class="lni lni-cloud-network"></i>
           </div>
           <div class="service_content">
-            <h4 class="service_title">DevOps & Deployment</h4>
-            <p>
-              Containerize applications with Docker, orchestrate deployments,
-              and manage CI/CD workflows.
-            </p>
+            <h4
+              data-i18n={getTranslation("services.devops.title")}
+              class="service_title"
+            >
+            </h4>
+            <p data-i18n={getTranslation("services.devops.description")}></p>
           </div>
         </div>
       </div>
     </div>
-    <!-- row -->
   </div>
-  <!-- container -->
 </section>

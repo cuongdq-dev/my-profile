@@ -1,11 +1,23 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import TranslationScript from "../components/TranslationScript.astro";
+
+// TODO GET LANG HERE
+
+interface Props {
+  lang?: string;
+}
+
+let { lang } = Astro.props;
+if (!lang) {
+  lang = "en";
+}
 ---
 
 <!doctype html>
 <html
-  lang="en"
+  lang={lang}
   class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
 >
   <head>
@@ -60,7 +72,9 @@ import Header from "../components/Header.astro";
       </div>
     </div>
     <Header />
+
     <slot />
+    <TranslationScript />
     <Footer />
 
     <!--====== Jquery js ======-->

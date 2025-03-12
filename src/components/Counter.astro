@@ -1,3 +1,7 @@
+---
+import { getTranslation } from "../utils/ui";
+---
+
 <section id="counter" class="counter_area gray-bg pt-70 pb-120">
   <div class="container">
     <div class="row">
@@ -12,7 +16,7 @@
           </div>
           <div class="counter_content media-body">
             <span class="count"><span class="counter">123</span>+</span>
-            <p>Projects Done</p>
+            <p data-i18n={getTranslation("counter.project_done")}></p>
           </div>
         </div>
         <!-- single counter -->
@@ -28,7 +32,7 @@
           </div>
           <div class="counter_content media-body">
             <span class="count"><span class="counter">70</span></span>
-            <p>Satisfied Clients</p>
+            <p data-i18n={getTranslation("counter.satisfied_clients")}></p>
           </div>
         </div>
         <!-- single counter -->
@@ -44,7 +48,7 @@
           </div>
           <div class="counter_content media-body">
             <span class="count"><span class="counter">15</span></span>
-            <p>Active Projects</p>
+            <p data-i18n={getTranslation("counter.active_project")}></p>
           </div>
         </div>
         <!-- single counter -->
@@ -60,7 +64,7 @@
           </div>
           <div class="counter_content media-body">
             <span class="count"><span class="counter">5</span></span>
-            <p>Years Experience</p>
+            <p data-i18n={getTranslation("counter.years_experience")}></p>
           </div>
         </div>
         <!-- single counter -->

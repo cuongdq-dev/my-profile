@@ -1,5 +1,10 @@
 ---
+import { getTranslation } from "../utils/ui";
 
+const email = import.meta.env.EMAIL;
+const facebookUrl = import.meta.env.FACEBOOK_URL;
+const githubUrl = import.meta.env.GITHUB_URL;
+const phoneNumber = import.meta.env.PHONE_NUMBER;
 ---
 
 <footer id="footer" class="footer_area gray-bg pt-115 pb-120">
@@ -9,24 +14,50 @@
         <div class="footer_content text-center">
           <a href="#"><img src="assets/images/logo.svg" alt="Logo" /></a>
           <ul class="footer_social">
-            <li><a href="#"><i class="lni lni-facebook"></i></a></li>
-            <li><a href="#"><i class="lni lni-twitter"></i></a></li>
-            <li><a href="#"><i class="lni lni-instagram"></i></a></li>
-            <li><a href="#"><i class="lni lni-linkedin"></i></a></li>
+            {
+              facebookUrl && (
+                <li>
+                  <a target="_blank" href={facebookUrl}>
+                    <i class="lni lni-facebook-filled" />
+                  </a>
+                </li>
+              )
+            }
+            {
+              githubUrl && (
+                <li>
+                  <a target="_blank" href={githubUrl}>
+                    <i class="lni lni-github" />
+                  </a>
+                </li>
+              )
+            }
+            {
+              phoneNumber && (
+                <li>
+                  <a href={`tel://${phoneNumber}`}>
+                    <i class="lni lni-phone" />
+                  </a>
+                </li>
+              )
+            }
           </ul>
-          <span class="email">someone@example.com</span>
-          <ul class="footer_menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
+          {email && <span class="email">{email}</span>}
+          <!-- <ul class="footer_menu">
+            <li><a data-i18n={getTranslation("nav.home")} href="#"></a></li>
+            <li><a data-i18n={getTranslation("nav.about_us")} href="#"></a></li>
+            <li><a data-i18n={getTranslation("nav.service")} href="#"></a></li>
+            <li>
+              <a data-i18n={getTranslation("nav.portfolio")} href="#"></a>
+            </li>
+            <li>
+              <a data-i18n={getTranslation("nav.contact_us")} href="#"></a>
+            </li>
+          </ul> -->
           <p class="credit pt-45">
-            Template Designed and Developed by <a
-              href="https://uideck.com/"
-              rel="nofollow">UIdeck</a
+            <span data-i18n={getTranslation("footer.credit")}></span>
+            <a href="https://uideck.com/" rel="nofollow"
+              >{import.meta.env.AUTHOR_NAME}</a
             >
           </p>
         </div>
