@@ -181,6 +181,8 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
 <!-- header hero -->
 
 <script>
+  import { defaultLang } from "../utils/ui";
+
   // Language select change event
   document.addEventListener("DOMContentLoaded", function () {
     const langSelect = document.getElementById(
@@ -189,7 +191,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
 
     if (langSelect) {
       // ✅ Get the saved language from localStorage or set "en" as default
-      const savedLang = localStorage.getItem("lang") || "en";
+      const savedLang = localStorage.getItem("lang") || defaultLang;
 
       // ✅ Set the default value of <select>
       langSelect.value = savedLang;

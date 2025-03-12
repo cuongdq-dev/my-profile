@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import TranslationScript from "../components/TranslationScript.astro";
+import { defaultLang } from "../utils/ui";
 
 // TODO GET LANG HERE
 
@@ -11,7 +12,7 @@ interface Props {
 
 let { lang } = Astro.props;
 if (!lang) {
-  lang = "en";
+  lang = defaultLang;
 }
 ---
 

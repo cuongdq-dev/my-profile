@@ -3,7 +3,7 @@ export const languages = {
   vi: "Việt Nam",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "vi";
 
 export type UiKeys =
   | "nav.home"
