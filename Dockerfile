@@ -30,7 +30,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 WORKDIR /usr/share/nginx/html
 
 # Expose port 4000
-EXPOSE 4000
+EXPOSE 8000
 
 # Run Nginx in the foreground
 CMD ["/bin/sh", "-c", "nginx -g \"daemon off;\""]
