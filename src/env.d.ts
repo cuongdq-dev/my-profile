@@ -14,6 +14,8 @@ declare global {
     image: string;
     category: string;
     description: string;
+    teamSize?: number;
+    role?: string;
     link: string;
   };
 

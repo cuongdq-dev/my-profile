@@ -49,6 +49,8 @@ export type UiKeys =
   | "project.main_title"
   | "project.button"
   | "project.items"
+  | "project.team_size"
+  | "project.role"
   //
   | "services.sub_title"
   | "services.main_title"
@@ -116,6 +118,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.button": "All Works",
     "project.main_title": "Latest Projects",
     "project.sub_title": "Portfolio",
+    "project.team_size": "Team Size",
+    "project.role": "Role",
 
     "services.sub_title": "Services",
     "services.main_title": "Service I Provide",
@@ -240,6 +244,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "A system that supports attendance tracking, task assignment, internal messaging, and work progress monitoring.",
         link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
       },
       {
         title: "Transportation Service",
@@ -248,6 +254,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "A system for managing transportation, order placement, cost calculation, and journey tracking.",
         link: "#",
+        teamSize: 8,
+        role: "Developer",
       },
       {
         title: "Eztub Media - YouTube Video Upload System",
@@ -256,6 +264,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Batch system for automatic video retrieval, distribution, and livestreaming to YouTube.",
         link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
       },
       {
         title: "KOL/KOC Information Management",
@@ -264,6 +274,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "A system for managing and connecting influencers with clients, tracking campaign performance.",
         link: "#",
+        teamSize: 1,
+        role: "Leader & Developer",
       },
       {
         title: "Crawl Hot Trending",
@@ -272,6 +284,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "An automated system that collects trending information from multiple sources.",
         link: "#",
+        teamSize: 2,
+        role: "Leader & Developer",
       },
       {
         title: "Fixel - Service Connection Platform",
@@ -280,6 +294,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Includes two React Native apps (Fixel, Worker), an admin website, and a landing page to connect customers with repair technicians.",
         link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
       },
       {
         title: "Remote Computer Power Management System",
@@ -288,6 +304,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "A system to remotely manage and control the power status of computers to save electricity.",
         link: "#",
+        teamSize: 2,
+        role: "Developer",
       },
     ],
     x: "",
@@ -337,6 +355,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.button": "Tất cả dự án",
     "project.main_title": "Dự án mới nhất",
     "project.sub_title": "Danh mục dự án",
+    "project.team_size": "Quy mô nhóm",
+    "project.role": "Vai trò",
 
     "services.sub_title": "Dịch vụ",
     "services.main_title": "Dịch vụ tôi cung cấp",
@@ -459,6 +479,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Quản lý nhân sự, chấm công, giao task, nhắn tin nội bộ và theo dõi tiến độ công việc.",
         link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
       },
       {
         title: "Dịch vụ vận tải",
@@ -467,6 +489,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Hệ thống đặt đơn, theo dõi hành trình và tính toán chi phí vận chuyển.",
         link: "#",
+        teamSize: 8,
+        role: "Developer",
       },
       {
         title: "Eztub Media - Hệ thống đăng video YouTube",
@@ -475,11 +499,15 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Hệ thống tự động lấy video, chỉnh sửa và livestream lên YouTube.",
         link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
       },
       {
         title: "Hệ thống quản lý KOL/KOC",
         image: "/assets/images/project-kol-landing.jpg",
         category: "Influencer Marketing",
+        teamSize: 1,
+        role: "Leader & Developer",
         description:
           "Kết nối KOL/KOC với nhãn hàng, theo dõi hiệu suất chiến dịch quảng cáo.",
         link: "#",
@@ -488,6 +516,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         title: "Crawl hot trending",
         image: "/assets/images/project-crawl-trending.jpg",
         category: "Dữ liệu & AI",
+        teamSize: 2,
+        role: "Leader & Developer",
         description: "Thu thập dữ liệu trending từ nhiều nguồn khác nhau.",
         link: "#",
       },
@@ -495,6 +525,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         title: "Fixel - Hệ thống kết nối dịch vụ sửa chữa",
         image: "/assets/images/project-fixel.jpg",
         category: "Dịch vụ sửa chữa",
+        teamSize: 4,
+        role: "Leader & Developer",
         description:
           "Ứng dụng kết nối khách hàng với thợ sửa chữa, hỗ trợ qua web & mobile.",
         link: "#",
@@ -502,6 +534,8 @@ export const ui: Record<string, Record<UiKeys, any>> = {
       {
         title: "Hệ thống quản lý bật/tắt máy tính từ xa",
         image: "/assets/images/project-meta-pc.jpg",
+        teamSize: 2,
+        role: "Developer",
         category: "Quản lý hệ thống",
         description:
           "Quản lý và điều khiển trạng thái bật/tắt máy tính từ xa, tiết kiệm điện năng.",

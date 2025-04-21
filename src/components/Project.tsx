@@ -65,13 +65,13 @@ export const Project = () => {
               </ul>
             </div>
           </div>
-          <div className="col-sm-3">
+          {/* <div className="col-sm-3">
             <div className="project_btn text-sm-right">
               <a className="main-btn main-btn-2" href="#">
                 {ui[lang]["project.button"]}
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="row project_active">
@@ -91,6 +91,14 @@ export const Project = () => {
                   </h4>
                   <p>{project.category}</p>
                   <p>{project.description}</p>
+                  <div className="flex flex-col flex-wrap gap-2">
+                    <p style={{ fontWeight: 600, fontSize: "14px" }}>
+                      {ui[lang]["project.role"]}: {project?.role}
+                    </p>
+                    <p style={{ fontWeight: 600, fontSize: "14px" }}>
+                      {ui[lang]["project.team_size"]}: {project?.teamSize}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
