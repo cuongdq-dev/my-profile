@@ -1386,6 +1386,50 @@ p {
   margin-top: 5px;
 }
 
+
+.single_project .project_content .project_label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #293651;
+}
+
+.single_project .project_content .project_label .project_value {
+  /* font-weight: 600; */
+  margin-left: 5px;
+}
+
+
+.single_project .project_content .project_array {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.single_project .project_content .project_array .project_array_item {
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  background-color: rgb(222, 227, 225);
+  color: rgb(0, 0, 0);
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.single_project .project_content .project_label .project_tag {
+  font-size: 12px;
+  background-color: #00A78E;
+  color: white;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
 .project_active .slick-arrow {
   position: absolute;
   bottom: -80px;

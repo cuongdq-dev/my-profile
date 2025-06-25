@@ -65,13 +65,6 @@ export const Project = () => {
               </ul>
             </div>
           </div>
-          {/* <div className="col-sm-3">
-            <div className="project_btn text-sm-right">
-              <a className="main-btn main-btn-2" href="#">
-                {ui[lang]["project.button"]}
-              </a>
-            </div>
-          </div> */}
         </div>
 
         <div className="row project_active">
@@ -82,22 +75,35 @@ export const Project = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    style={{ height: "300px" }}
+                    style={{ height: "300px", objectFit: "cover" }}
                   />
                 </div>
                 <div className="project_content">
+                  <p
+                    style={{
+                      fontStyle: "italic",
+                      fontSize: "12px",
+                      color: "rgba(0, 0, 0, 0.6)",
+                    }}
+                  >
+                    {project.category}
+                  </p>
                   <h4 className="project_title">
-                    <a href={project.link}>{project.title}</a>
+                    <a>{project.title}</a>
                   </h4>
-                  <p>{project.category}</p>
                   <p>{project.description}</p>
-                  <div className="flex flex-col flex-wrap gap-2">
-                    <p style={{ fontWeight: 600, fontSize: "14px" }}>
-                      {ui[lang]["project.role"]}: {project?.role}
-                    </p>
-                    <p style={{ fontWeight: 600, fontSize: "14px" }}>
-                      {ui[lang]["project.team_size"]}: {project?.teamSize}
-                    </p>
+                  {/* <p className="project_label">
+                    {ui[lang]["project.team_size"]}:
+                    <span className="project_value">{project?.teamSize}</span>
+                  </p> */}
+                  <p className="project_label">
+                    <span className="project_tag">{project?.role}</span>
+                  </p>
+                  {/* {ui[lang]["project.technology"]}:{" "} */}
+                  <div className="project_array">
+                    {project?.technology?.map((t: string) => {
+                      return <p className="project_array_item">{t}</p>;
+                    })}
                   </div>
                 </div>
               </div>

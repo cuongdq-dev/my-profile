@@ -3,7 +3,7 @@ export const languages = {
   vi: "Việt Nam",
 };
 
-export const defaultLang = "vi";
+export const defaultLang = "en";
 
 export type UiKeys =
   | "nav.home"
@@ -51,6 +51,7 @@ export type UiKeys =
   | "project.items"
   | "project.team_size"
   | "project.role"
+  | "project.technology"
   //
   | "services.sub_title"
   | "services.main_title"
@@ -120,6 +121,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.sub_title": "Portfolio",
     "project.team_size": "Team Size",
     "project.role": "Role",
+    "project.technology": "Tech stack",
 
     "services.sub_title": "Services",
     "services.main_title": "Service I Provide",
@@ -238,54 +240,62 @@ export const ui: Record<string, Record<UiKeys, any>> = {
 
     "project.items": [
       {
-        title: "Company Internal Management System",
-        image: "/assets/images/project-company-admin.jpg",
-        category: "Management System",
+        title: "AI Content Management System ",
+        image: "/assets/images/project-admin-system.png",
+        category: "AI & Content Management",
         description:
-          "A system that supports attendance tracking, task assignment, internal messaging, and work progress monitoring.",
-        link: "#",
-        teamSize: 4,
-        role: "Leader & Developer",
-      },
-      {
-        title: "Transportation Service",
-        image: "/assets/images/project-logistic.jpg",
-        category: "Transportation & Logistics",
-        description:
-          "A system for managing transportation, order placement, cost calculation, and journey tracking.",
-        link: "#",
-        teamSize: 8,
-        role: "Developer",
-      },
-      {
-        title: "Eztub Media - YouTube Video Upload System",
-        image: "/assets/images/project-ez.jpg",
-        category: "Content Automation",
-        description:
-          "Batch system for automatic video retrieval, distribution, and livestreaming to YouTube.",
-        link: "#",
-        teamSize: 4,
-        role: "Leader & Developer",
-      },
-      {
-        title: "KOL/KOC Information Management",
-        image: "/assets/images/project-kol-landing.jpg",
-        category: "Influencer Marketing",
-        description:
-          "A system for managing and connecting influencers with clients, tracking campaign performance.",
-        link: "#",
-        teamSize: 1,
-        role: "Leader & Developer",
-      },
-      {
-        title: "Crawl Hot Trending",
-        image: "/assets/images/project-crawl-trending.jpg",
-        category: "Data & AI",
-        description:
-          "An automated system that collects trending information from multiple sources.",
+          "A system for managing news and AI-generated stories, including admin dashboard, content crawling, AI rewriting, and automated SEO optimization.",
         link: "#",
         teamSize: 2,
         role: "Leader & Developer",
+        technology: [
+          "Typescript",
+          "NestJS",
+          "ReactJS",
+          "Swagger",
+          "TypeORM",
+          "PostgreSQL",
+          "Microservices",
+          "Docker",
+        ],
+      },
+
+      {
+        title: "Hot Trending - AI News Platform",
+        image: "/assets/images/project-hottrending.png",
+        category: "AI & NEWS",
+        description:
+          "An AI-powered news platform that automatically collects trending articles and rewrites them in a unique style. Generates SEO-optimized titles and descriptions. Clean, mobile-friendly interface for quick reading.",
+        teamSize: 1,
+        role: "Leader & Developer",
+        link: "https://hottrending.asia",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "TypeScript",
+          "Tailwind CSS",
+          "DaisyUI",
+          "Docker",
+        ],
+      },
+      {
+        title: "Vùng Đất Truyện - AI Story Platform",
+        image: "/assets/images/project-vungdattruyen.png",
+        category: "AI & BOOKS",
+        description:
+          "Fully AI-rewritten stories with sleek, responsive UI and clean chapter-based navigation.",
+        teamSize: 1,
+        role: "Leader & Developer",
+        link: "https://vungdattruyen.asia",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "Tailwindcss",
+          "Docker",
+          "Typescript",
+        ],
       },
       {
         title: "Fixel - Service Connection Platform",
@@ -296,6 +306,84 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         link: "#",
         teamSize: 4,
         role: "Leader & Developer",
+        technology: [
+          "Ant Design",
+          "React Navite",
+          "React",
+          "Nest JS",
+          "SQL",
+          "Firebase",
+          "Socket",
+          "Typescript",
+        ],
+      },
+      {
+        title: "Eztub Media - YouTube Video Upload System",
+        image: "/assets/images/project-ez.jpg",
+        category: "Content Automation",
+        description:
+          "Batch system for automatic video retrieval, distribution, and livestreaming to YouTube.",
+        link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "MongoDB",
+          "TypeScript",
+          "MUI Material UI",
+          "Typescript",
+        ],
+      },
+      {
+        title: "KOL/KOC Information Management",
+        image: "/assets/images/project-kol-landing.jpg",
+        category: "Influencer Marketing",
+        description:
+          "A system for managing and connecting influencers with clients, tracking campaign performance.",
+        link: "#",
+        teamSize: 1,
+        role: "Leader & Developer",
+        technology: [
+          "React",
+          "Astro",
+          "Strapi",
+          "Nest JS",
+          "PostgreSQL",
+          "Typescript",
+        ],
+      },
+
+      {
+        title: "Company Internal Management System",
+        image: "/assets/images/project-company-admin.jpg",
+        category: "Management System",
+        description:
+          "A system that supports attendance tracking, task assignment, internal messaging, and work progress monitoring.",
+        link: "#",
+        teamSize: 4,
+        role: "Leader & Developer",
+        technology: [
+          "React Navite",
+          "React",
+          "Nest JS",
+          "Postgre SQL",
+          "Firebase",
+          "Ant Design",
+          "Typescript",
+        ],
+      },
+      {
+        title: "Transportation Service",
+        image: "/assets/images/project-logistic.jpg",
+        category: "Transportation & Logistics",
+        description:
+          "A system for managing transportation, order placement, cost calculation, and journey tracking.",
+        link: "#",
+        teamSize: 8,
+        role: "Developer",
+        technology: ["React", "Nest JS", "MongoDB", "Ant Design", "Typescript"],
       },
       {
         title: "Remote Computer Power Management System",
@@ -306,6 +394,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         link: "#",
         teamSize: 2,
         role: "Developer",
+        technology: ["React", "Nest JS", "Postgre SQL", "Typescript"],
       },
     ],
     x: "",
@@ -357,6 +446,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     "project.sub_title": "Danh mục dự án",
     "project.team_size": "Quy mô nhóm",
     "project.role": "Vai trò",
+    "project.technology": "Kỹ Thuật",
 
     "services.sub_title": "Dịch vụ",
     "services.main_title": "Dịch vụ tôi cung cấp",
@@ -473,25 +563,84 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     ],
     "project.items": [
       {
-        title: "Hệ thống quản lý nội bộ công ty",
-        image: "/assets/images/project-company-admin.jpg",
-        category: "Hệ thống quản lý",
+        title: "Hệ thống quản lý nội dung AI",
+        image: "/assets/images/project-admin-system.png",
+        category: "AI & Quản lý nội dung",
         description:
-          "Quản lý nhân sự, chấm công, giao task, nhắn tin nội bộ và theo dõi tiến độ công việc.",
+          "Quản lý nội dung tin tức và truyện được viết bằng AI. Gồm hệ thống admin, AI rewrite, batch crawl và SEO tự động.",
         link: "#",
-        teamSize: 4,
+        teamSize: 2,
         role: "Leader & Developer",
+        technology: [
+          "Typescript",
+          "NestJS",
+          "ReactJS",
+          "Swagger",
+          "TypeORM",
+          "PostgreSQL",
+          "Microservices",
+          "Docker",
+        ],
       },
       {
-        title: "Dịch vụ vận tải",
-        image: "/assets/images/project-logistic.jpg",
-        category: "Vận tải & Logistics",
+        title: "Hot Trending - AI News Platform",
+        image: "/assets/images/project-hottrending.png",
+        category: "AI & Tin tức",
         description:
-          "Hệ thống đặt đơn, theo dõi hành trình và tính toán chi phí vận chuyển.",
-        link: "#",
-        teamSize: 8,
-        role: "Developer",
+          "Nền tảng tin tức sử dụng AI để thu thập và viết lại các bài báo nổi bật theo phong cách riêng. Hệ thống tự động sinh tiêu đề và mô tả chuẩn SEO, giao diện tối giản, dễ đọc, tối ưu cho thiết bị di động.",
+        teamSize: 1,
+        role: "Leader & Developer",
+        link: "https://hottrending.asia",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "TypeScript",
+          "Tailwind CSS",
+          "DaisyUI",
+          "Docker",
+        ],
       },
+      {
+        title: "Vùng Đất Truyện - AI Story Platform",
+        image: "/assets/images/project-vungdattruyen.png",
+        category: "AI & Truyện",
+        description:
+          "Truyện viết lại hoàn toàn bằng AI, giao diện mượt mà, hiển thị rõ ràng theo chương và tối ưu cho mọi thiết bị.",
+        teamSize: 1,
+        role: "Leader & Developer",
+        link: "https://vungdattruyen.asia",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "Tailwindcss",
+          "Docker",
+          "Typescript",
+        ],
+      },
+
+      {
+        title: "Fixel - Hệ thống kết nối dịch vụ sửa chữa",
+        image: "/assets/images/project-fixel.jpg",
+        category: "Dịch vụ sửa chữa",
+        teamSize: 4,
+        role: "Leader & Developer",
+        description:
+          "Ứng dụng kết nối khách hàng với thợ sửa chữa, hỗ trợ qua web & mobile.",
+        link: "#",
+        technology: [
+          "Ant Design",
+          "React Navite",
+          "React",
+          "Nest JS",
+          "SQL",
+          "Firebase",
+          "Socket",
+          "Typescript",
+        ],
+      },
+
       {
         title: "Eztub Media - Hệ thống đăng video YouTube",
         image: "/assets/images/project-ez.jpg",
@@ -501,6 +650,15 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         link: "#",
         teamSize: 4,
         role: "Leader & Developer",
+        technology: [
+          "Astro",
+          "React",
+          "Nest JS",
+          "MongoDB",
+          "TypeScript",
+          "MUI Material UI",
+          "Typescript",
+        ],
       },
       {
         title: "Hệ thống quản lý KOL/KOC",
@@ -511,25 +669,45 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Kết nối KOL/KOC với nhãn hàng, theo dõi hiệu suất chiến dịch quảng cáo.",
         link: "#",
+        technology: [
+          "React",
+          "Astro",
+          "Strapi",
+          "Nest JS",
+          "PostgreSQL",
+          "Typescript",
+        ],
       },
+
       {
-        title: "Crawl hot trending",
-        image: "/assets/images/project-crawl-trending.jpg",
-        category: "Dữ liệu & AI",
-        teamSize: 2,
-        role: "Leader & Developer",
-        description: "Thu thập dữ liệu trending từ nhiều nguồn khác nhau.",
+        title: "Hệ thống quản lý nội bộ công ty",
+        image: "/assets/images/project-company-admin.jpg",
+        category: "Hệ thống quản lý",
+        description:
+          "Quản lý nhân sự, chấm công, giao task, nhắn tin nội bộ và theo dõi tiến độ công việc.",
         link: "#",
-      },
-      {
-        title: "Fixel - Hệ thống kết nối dịch vụ sửa chữa",
-        image: "/assets/images/project-fixel.jpg",
-        category: "Dịch vụ sửa chữa",
         teamSize: 4,
         role: "Leader & Developer",
+        technology: [
+          "React Navite",
+          "React",
+          "Nest JS",
+          "Postgre SQL",
+          "Firebase",
+          "Ant Design",
+          "Typescript",
+        ],
+      },
+      {
+        title: "Dịch vụ vận tải",
+        image: "/assets/images/project-logistic.jpg",
+        category: "Vận tải & Logistics",
         description:
-          "Ứng dụng kết nối khách hàng với thợ sửa chữa, hỗ trợ qua web & mobile.",
+          "Hệ thống đặt đơn, theo dõi hành trình và tính toán chi phí vận chuyển.",
         link: "#",
+        teamSize: 8,
+        role: "Developer",
+        technology: ["React", "Nest JS", "MongoDB", "Ant Design", "Typescript"],
       },
       {
         title: "Hệ thống quản lý bật/tắt máy tính từ xa",
@@ -540,6 +718,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
         description:
           "Quản lý và điều khiển trạng thái bật/tắt máy tính từ xa, tiết kiệm điện năng.",
         link: "#",
+        technology: ["React", "Nest JS", "Postgre SQL", "Typescript"],
       },
     ],
     x: "",
