@@ -15,22 +15,29 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
             <a class="navbar-brand" href="index.html">
               <img src="assets/images/logo.svg" alt="Logo" />
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-              <span class="toggler-icon"></span>
-            </button>
+
+            <div class="row">
+              <select id="langSelectMobile" class="mr-20 lang-select-header">
+                <option class="nav-item" value="en">🇺🇸</option>
+                <option class="nav-item" value="vi">🇻🇳</option>
+              </select>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
+            </div>
 
             <div
-              class="collapse navbar-collapse sub-menu-bar"
+              class="collapse navbar-collapse sub-menu-bar p-20"
               id="navbarSupportedContent"
             >
               <ul id="nav" class="navbar-nav ml-auto">
@@ -187,6 +194,28 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
   document.addEventListener("DOMContentLoaded", function () {
     const langSelect = document.getElementById(
       "langSelect"
+    ) as HTMLSelectElement | null;
+
+    if (langSelect) {
+      // ✅ Get the saved language from localStorage or set "en" as default
+      const savedLang = localStorage.getItem("lang") || defaultLang;
+
+      // ✅ Set the default value of <select>
+      langSelect.value = savedLang;
+
+      // ✅ Listen for changes and update localStorage
+      langSelect.addEventListener("change", function () {
+        const selectedLang = langSelect.value;
+        localStorage.setItem("lang", selectedLang);
+        window.dispatchEvent(new Event("languageChange"));
+        window.dispatchEvent(new Event("storage"));
+      });
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const langSelect = document.getElementById(
+      "langSelectMobile"
     ) as HTMLSelectElement | null;
 
     if (langSelect) {
