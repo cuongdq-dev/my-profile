@@ -69,7 +69,7 @@ export const Project = () => {
 
         <div className="row project_active">
           {projects.map((project: Record<string, any>, index: number) => (
-            <div key={index} className="col-lg-4">
+            <div key={`${index}_${project?.title}`} className="col-lg-4">
               <div className="single_project">
                 <div className="project_image">
                   <img
@@ -92,17 +92,16 @@ export const Project = () => {
                     <a>{project.title}</a>
                   </h4>
                   <p>{project.description}</p>
-                  {/* <p className="project_label">
-                    {ui[lang]["project.team_size"]}:
-                    <span className="project_value">{project?.teamSize}</span>
-                  </p> */}
                   <p className="project_label">
                     <span className="project_tag">{project?.role}</span>
                   </p>
-                  {/* {ui[lang]["project.technology"]}:{" "} */}
                   <div className="project_array">
-                    {project?.technology?.map((t: string) => {
-                      return <p className="project_array_item">{t}</p>;
+                    {project?.technology?.map((t: string, i: number) => {
+                      return (
+                        <p key={`${t}_${i}`} className="project_array_item">
+                          {t}
+                        </p>
+                      );
                     })}
                   </div>
                 </div>

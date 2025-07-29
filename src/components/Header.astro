@@ -10,16 +10,16 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
   <div class="header_navbar">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 p-0">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
               <img src="assets/images/logo.svg" alt="Logo" />
             </a>
 
-            <div class="row">
-              <select id="langSelectMobile" class="mr-20 lang-select-header">
-                <option class="nav-item" value="en">🇺🇸</option>
-                <option class="nav-item" value="vi">🇻🇳</option>
+            <div class="row navbar-right m-0">
+              <select id="langSelectMobile" class="lang-select-mobile">
+                <option class="nav-item" value="en">🇺🇸 English</option>
+                <option class="nav-item" value="vi">🇻🇳 Tiếng Việt</option>
               </select>
               <button
                 class="navbar-toggler"
@@ -37,7 +37,7 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
             </div>
 
             <div
-              class="collapse navbar-collapse sub-menu-bar p-20"
+              class="full-width collapse navbar-collapse sub-menu-bar p-20"
               id="navbarSupportedContent"
             >
               <ul id="nav" class="navbar-nav ml-auto">
@@ -77,10 +77,12 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
                   >
                 </li>
                 <!-- Language Select Dropdown -->
-                <select id="langSelect" class="ml-4 lang-select">
-                  <option class="nav-item" value="en">🇺🇸 English</option>
-                  <option class="nav-item" value="vi"> 🇻🇳 Tiếng Việt</option>
-                </select>
+                <li class="nav-item nav-item-language">
+                  <select id="langSelect" class="lang-select">
+                    <option class="nav-item" value="en">🇺🇸 English</option>
+                    <option class="nav-item" value="vi">🇻🇳 Tiếng Việt</option>
+                  </select>
+                </li>
               </ul>
             </div>
           </nav>
@@ -189,49 +191,22 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
 
 <script>
   import { defaultLang } from "../utils/ui";
-
-  // Language select change event
   document.addEventListener("DOMContentLoaded", function () {
-    const langSelect = document.getElementById(
-      "langSelect"
-    ) as HTMLSelectElement | null;
+    const langSelectIds = ["langSelect", "langSelectMobile"];
+    const savedLang = localStorage.getItem("lang") || defaultLang;
 
-    if (langSelect) {
-      // ✅ Get the saved language from localStorage or set "en" as default
-      const savedLang = localStorage.getItem("lang") || defaultLang;
+    langSelectIds.forEach((id) => {
+      const selectEl = document.getElementById(id) as HTMLSelectElement | null;
+      if (selectEl) {
+        selectEl.value = savedLang;
 
-      // ✅ Set the default value of <select>
-      langSelect.value = savedLang;
-
-      // ✅ Listen for changes and update localStorage
-      langSelect.addEventListener("change", function () {
-        const selectedLang = langSelect.value;
-        localStorage.setItem("lang", selectedLang);
-        window.dispatchEvent(new Event("languageChange"));
-        window.dispatchEvent(new Event("storage"));
-      });
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const langSelect = document.getElementById(
-      "langSelectMobile"
-    ) as HTMLSelectElement | null;
-
-    if (langSelect) {
-      // ✅ Get the saved language from localStorage or set "en" as default
-      const savedLang = localStorage.getItem("lang") || defaultLang;
-
-      // ✅ Set the default value of <select>
-      langSelect.value = savedLang;
-
-      // ✅ Listen for changes and update localStorage
-      langSelect.addEventListener("change", function () {
-        const selectedLang = langSelect.value;
-        localStorage.setItem("lang", selectedLang);
-        window.dispatchEvent(new Event("languageChange"));
-        window.dispatchEvent(new Event("storage"));
-      });
-    }
+        selectEl.addEventListener("change", function () {
+          const selectedLang = selectEl.value;
+          localStorage.setItem("lang", selectedLang);
+          window.dispatchEvent(new Event("languageChange"));
+          window.dispatchEvent(new Event("storage"));
+        });
+      }
+    });
   });
 </script>
