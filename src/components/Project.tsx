@@ -41,7 +41,7 @@ export const Project = () => {
   }, []);
 
   return (
-    <section id="project" className="project_area pt-125">
+    <section id="project" className="project_area pt-125 ">
       <div className="container">
         <div className="row">
           <div className="col-sm-9">
