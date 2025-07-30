@@ -539,7 +539,7 @@
   width: 7px;
   height: 7px;
   pointer-events: none;
-  z-index: 99999999;
+  z-index: 100;
   border-radius: 50%;
   box-shadow: -120px -218.66667px blue, 248px -16.66667px #00ff84,
     190px 16.33333px #002bff, -113px -308.66667px #ff009d,

@@ -11,16 +11,8 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
   <About />
   <Service />
-  <div>
-    <div class="pyro">
-      <div class="before"></div><div class="after"></div>
-    </div>
-    <Project client:load />
-    <div class="pyro">
-      <div class="before"></div><div class="after"></div>
-    </div>
-    <Counter />
-  </div>
+  <Project client:load />
+  <Counter />
   <Experience client:load />
   <Contact />
 </Layout>

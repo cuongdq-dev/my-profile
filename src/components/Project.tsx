@@ -66,6 +66,10 @@ export const Project = () => {
             </div>
           </div>
         </div>
+        <div className="pyro">
+          <div className="before"></div>
+          <div className="after"></div>
+        </div>
 
         <div className="row project_active">
           {projects.map((project: Record<string, any>, index: number) => (
