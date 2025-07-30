@@ -29,17 +29,19 @@ import { getTranslation } from "../utils/ui";
             </div>
             <!-- call to action content -->
 
-            <div class="call_to_action_btn">
+            <div class="call_to_action_btn btn-animation-2">
               <a
                 target="_blank"
                 href={`mailto:${import.meta.env.EMAIL}`}
                 rel="nofollow"
-                class="main-btn"
               >
-                <span data-i18n={getTranslation("contact.hire_me_btn")}> </span>
-                <span>
-                  <i class="ml-2 lni lni-envelope"></i>
-                </span>
+                <button class="btn-shine">
+                  <span data-i18n={getTranslation("contact.hire_me_btn")}>
+                  </span>
+                  <span>
+                    <i class="ml-2 lni lni-envelope"></i>
+                  </span>
+                </button>
               </a>
             </div>
             <!-- call to action btn -->
