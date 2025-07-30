@@ -10,7 +10,6 @@ export const Experience = () => {
   useEffect(() => {
     const updateHeight = () => {
       if (containerRef.current) {
-        console.log(containerRef.current.offsetHeight);
         setComponentHeight(containerRef.current.offsetHeight);
       }
     };
