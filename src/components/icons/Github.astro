@@ -1,0 +1,13 @@
+---
+const value = import.meta.env.GIT_URL;
+---
+
+{
+  value && (
+    <li>
+      <a target="_blank" href={value}>
+        <i class="lni lni-github" />
+      </a>
+    </li>
+  )
+}

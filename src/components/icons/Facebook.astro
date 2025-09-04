@@ -1,0 +1,13 @@
+---
+const value = import.meta.env.FACEBOOK_URL;
+---
+
+{
+  value && (
+    <li>
+      <a target="_blank" href={value}>
+        <i class="lni lni-facebook-filled" />
+      </a>
+    </li>
+  )
+}

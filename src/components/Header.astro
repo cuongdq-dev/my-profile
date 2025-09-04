@@ -1,9 +1,9 @@
 ---
 import { getTranslation } from "../utils/ui";
-
-const facebookUrl = import.meta.env.FACEBOOK_URL;
-const githubUrl = import.meta.env.GITHUB_URL;
-const phoneNumber = import.meta.env.PHONE_NUMBER;
+import Email from "./icons/Email.astro";
+import Facebook from "./icons/Facebook.astro";
+import Github from "./icons/Github.astro";
+import Phone from "./icons/Phone.astro";
 ---
 
 <section class="header_area">
@@ -119,33 +119,10 @@ const phoneNumber = import.meta.env.PHONE_NUMBER;
 
 <div id="home" class="header_hero">
   <ul class="header_social d-none d-lg-block">
-    {
-      facebookUrl && (
-        <li>
-          <a target="_blank" href={facebookUrl}>
-            <i class="lni lni-facebook-filled" />
-          </a>
-        </li>
-      )
-    }
-    {
-      githubUrl && (
-        <li>
-          <a target="_blank" href={githubUrl}>
-            <i class="lni lni-github" />
-          </a>
-        </li>
-      )
-    }
-    {
-      phoneNumber && (
-        <li>
-          <a href={`tel://${phoneNumber}`}>
-            <i class="lni lni-phone" />
-          </a>
-        </li>
-      )
-    }
+    <Facebook />
+    <Github />
+    <Phone />
+    <Email />
   </ul>
   <div class="container">
     <div

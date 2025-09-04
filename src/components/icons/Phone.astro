@@ -1,0 +1,13 @@
+---
+const value = import.meta.env.PHONE_NUMBER;
+---
+
+{
+  value && (
+    <li>
+      <a target="_blank" href={`https://zalo.me/${value}`}>
+        <i class="lni lni-phone" />
+      </a>
+    </li>
+  )
+}

@@ -29,7 +29,6 @@ export const Project = () => {
       subtree: true,
     });
 
-    // Lắng nghe sự kiện storage khi thay đổi từ tab khác
     window.addEventListener("storage", handleStorageChange);
     window.addEventListener("languageChanged", handleStorageChange);
 
