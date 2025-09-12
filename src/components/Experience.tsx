@@ -3,6 +3,7 @@ import { defaultLang, getTranslation, ui } from "../utils/ui";
 
 export const Experience = () => {
   const [lang, setLang] = useState(defaultLang);
+
   const experiences = ui[lang]?.["experience.items"] || [];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,20 +49,22 @@ export const Experience = () => {
   return (
     <div ref={containerRef} className="experience-wrapper">
       <div className="confetti">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="confetti-piece"
-            style={
-              {
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                backgroundColor: `hsl(${Math.random() * 360}, 70%, 60%)`,
-                "--fall-distance": `${componentHeight}px`,
-              } as React.CSSProperties & Record<string, string>
-            }
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          return (
+            <div
+              key={i + "_experience_animation"}
+              className="confetti-piece"
+              style={
+                {
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  backgroundColor: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                  "--fall-distance": `${componentHeight}px`,
+                } as React.CSSProperties & Record<string, string>
+              }
+            />
+          );
+        })}
       </div>
 
       <section id="work" className="work_experience_area pt-115 ">
@@ -91,17 +94,20 @@ export const Experience = () => {
           </div>
           <div className="work_experience">
             {experiences.map(
-              ({
-                delay,
-                order,
-                title,
-                company,
-                date,
-                number,
-                description,
-              }: Record<string, any>) => {
+              (
+                {
+                  delay,
+                  order,
+                  title,
+                  company,
+                  date,
+                  number,
+                  description,
+                }: Record<string, any>,
+                index: number
+              ) => {
                 return (
-                  <div className="row mt-50">
+                  <div key={`${title}_${index}`} className="row mt-50">
                     <div className="col-lg-12">
                       <div
                         className="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn"

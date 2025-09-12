@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { defaultLang, getTranslation, ui } from "../utils/ui";
+import Tooltip from "./Tooltip";
 
 export const Project = () => {
-  const [lang, setLang] = useState(() => defaultLang);
-  const projects = ui[lang]?.["project.items"] || [];
+  const [{ lang, projects }, setLang] = useState({
+    lang: defaultLang,
+    projects: ui[defaultLang]?.["project.items"] || [],
+  });
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -19,7 +22,10 @@ export const Project = () => {
   useEffect(() => {
     const handleStorageChange = () => {
       const newLang = localStorage.getItem("lang") || defaultLang;
-      setLang(newLang);
+      setLang({
+        lang: newLang,
+        projects: ui[newLang]?.["project.items"] || [],
+      });
     };
 
     const observer = new MutationObserver(handleStorageChange);
@@ -40,7 +46,7 @@ export const Project = () => {
   }, []);
 
   return (
-    <section id="project" className="project_area pt-125 ">
+    <section id="project" className="project_area pt-80 ">
       <div className="container">
         <div className="row">
           <div className="col-sm-9">
@@ -51,6 +57,7 @@ export const Project = () => {
               >
                 {ui[lang]["project.sub_title"]}
               </h5>
+
               <h3
                 data-i18n={getTranslation("project.main_title")}
                 className="main_title"
@@ -65,52 +72,68 @@ export const Project = () => {
             </div>
           </div>
         </div>
-        <div className="pyro">
-          <div className="before"></div>
-          <div className="after"></div>
-        </div>
 
         <div className="row project_active">
-          {projects.map((project: Record<string, any>, index: number) => (
-            <div key={`${index}_${project?.title}`} className="col-lg-4">
-              <div className="single_project">
-                <div className="project_image">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    style={{ height: "300px", objectFit: "cover" }}
-                  />
-                </div>
-                <div className="project_content">
-                  <p
-                    style={{
-                      fontStyle: "italic",
-                      fontSize: "12px",
-                      color: "rgba(0, 0, 0, 0.6)",
-                    }}
-                  >
-                    {project.category}
-                  </p>
-                  <h4 className="project_title">
-                    <a>{project.title}</a>
-                  </h4>
-                  <p>{project.description}</p>
-                  <p className="project_label">
-                    <span className="project_tag">{project?.role}</span>
-                  </p>
-                  <div className="project_array">
-                    {project?.technology?.map((t: string, i: number) => {
-                      return (
-                        <p key={`${t}_${i}`} className="project_array_item">
-                          {t}
-                        </p>
-                      );
-                    })}
+          {projects.map((project: Record<string, any>, index: number) => {
+            return (
+              <div key={`${index}_project_item`} className="col-lg-4">
+                <div className="single_project">
+                  <div className="project_image">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      style={{ height: "300px", objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="project_content">
+                    <p
+                      style={{
+                        fontStyle: "italic",
+                        fontSize: "12px",
+                        color: "rgba(0, 0, 0, 0.6)",
+                      }}
+                    >
+                      {project.category}
+                    </p>
+                    <h4 className="project_title">
+                      <a>{project.title}</a>
+                    </h4>
+                    <p>{project.description}</p>
+                    <p className="project_label">
+                      <Tooltip
+                        customStyles={{ whiteSpace: "nowrap" }}
+                        tooltip={ui[lang]["project.role"]}
+                      >
+                        <span className="project_tag">
+                          <i className="lni lni-apartment mr-1"></i>
+                          {project?.role}
+                        </span>
+                      </Tooltip>
+                      <Tooltip
+                        customStyles={{ whiteSpace: "nowrap" }}
+                        tooltip={ui[lang]["project.team_size"]}
+                      >
+                        <span className="project_team_size ml-2">
+                          <i className="lni lni-users mr-1"></i>
+                          {project?.teamSize || 1}
+                        </span>
+                      </Tooltip>
+                    </p>
+
+                    <div className="project_array">
+                      {project?.technology?.map((t: string, i: number) => {
+                        return (
+                          <p key={`${t}_${i}`} className="project_array_item">
+                            {t}
+                          </p>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

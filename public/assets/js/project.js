@@ -1,40 +1,52 @@
 $(function () {
-  $(".project_active").slick({
-    dots: false,
+  const $slider = $(".project_active");
+  $slider.slick({
     infinite: true,
+    initialSlide: 1,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     arrows: true,
+    dots: false,
     prevArrow: '<span class="prev"><i class="lni lni-chevron-left"></i></span>',
     nextArrow:
       '<span class="next"><i class="lni lni-chevron-right"></i></span>',
     speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    autoplaySpeed: 800,
+    autoplay: true,
+    pauseOnHover: true,
+
+    draggable: true, // Cho phép kéo bằng chuột
+    swipe: true, // Cho phép vuốt trên mobile
+    touchMove: true, // Vuốt sẽ trượt theo ngón tay
+    swipeToSlide: true,
+    cssEase: "linear",
+
+    // center:
+    centerMode: true,
+    adaptiveHeight: false, // bật true nếu slide có chiều cao khác nhau và bạn muốn track thay đổi
+    centerPadding: "10px",
     responsive: [
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
+        breakpoint: 991,
+        settings: { speed: 800, slidesToShow: 2, centerMode: false },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
+          centerMode: false,
+          centerPadding: "30px",
           slidesToShow: 1,
         },
       },
     ],
+  });
+
+  $(".project_active > .prev, .next").mouseenter(function () {
+    $slider.slick("slickPause");
+  });
+
+  $(".project_active > .prev, .next").mouseleave(function () {
+    $slider.slick("slickPlay");
   });
 
   //===== Slick Project
@@ -46,6 +58,8 @@ $(function () {
     speed: 800,
     slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1200,

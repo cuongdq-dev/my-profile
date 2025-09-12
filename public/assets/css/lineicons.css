@@ -18,7 +18,7 @@ Generated using nucleoapp.com
 .lni {
   display: inline-block;
   font: normal normal normal 1em/1 'LineIcons';
-  speak: none;
+  speak-as: none;
   text-transform: none;
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;

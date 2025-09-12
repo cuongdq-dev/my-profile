@@ -17,18 +17,19 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+
+
 .slick-list {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px !important
 }
 
 .slick-list:focus {
     outline: none;
+    cursor: hand;
 }
 
 .slick-list.dragging {
@@ -44,6 +45,8 @@
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+
 
 .slick-track {
     position: relative;

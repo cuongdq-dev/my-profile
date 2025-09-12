@@ -5,6 +5,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #646F87;
+  overflow-x: hidden;
 }
 
 * {
@@ -591,7 +592,7 @@ p {
 }
 
 /*===========================
-        02.HEADER css 
+        02.HEADER css
 ===========================*/
 /*===== NAVBAR =====*/
 .header_navbar {
@@ -986,6 +987,7 @@ p {
 }
 
 .header_social {
+  z-index: 100;
   position: absolute;
   top: 50%;
   left: 50px;
@@ -996,6 +998,12 @@ p {
   transform: translateY(-50%);
   border: 1px solid rgba(0, 167, 142, 0.21);
   border-radius: 50px;
+}
+
+
+.header_social:hover {
+  border: 1px solid rgba(0, 167, 142, 0.666);
+  background-color: rgba(144, 216, 215, 0.347);
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -1134,7 +1142,7 @@ p {
 }
 
 /*===========================
-        03.ABOUT css 
+        03.ABOUT css
 ===========================*/
 .about_image {
   position: relative;
@@ -1270,7 +1278,7 @@ p {
 }
 
 /*===========================
-       04.SERVICE css 
+       04.SERVICE css
 ===========================*/
 .services_area {
   background-color: #F9F9F9;
@@ -1370,14 +1378,15 @@ p {
 }
 
 /*===========================
-       05.PROJECT css 
+       05.PROJECT css
 ===========================*/
 .project_area {
-  padding-bottom: 180px;
+  padding-bottom: 40px;
 }
 
 .single_project {
   margin-top: 30px;
+  padding-bottom: 10px
 }
 
 .single_project .project_image img {
@@ -1452,18 +1461,62 @@ p {
   margin-top: 5px;
 }
 
+.single_project .project_content .project_label .project_team_size {
+  font-size: 12px;
+  background-color: #025eff89;
+  color: white;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+
+
+.project_active {
+  align-items: center;
+}
+
 .project_active .slick-arrow {
   position: absolute;
-  bottom: -80px;
-  right: 50%;
   z-index: 9;
-  margin: 0 15px;
   cursor: pointer;
+  opacity: 0.3;
+  -webkit-text-stroke-width: thick;
+  margin: 10px;
+}
+
+.project_active .slick-arrow:hover {
+  opacity: 1;
+}
+
+@media(min-width: 991px) {
+  .project_active .slick-slide {
+    transition: all 0.4s ease;
+    opacity: 0.5;
+    transform: scale(0.6);
+  }
+
+  .project_active .slick-center {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+    border-radius: 8px;
+  }
+}
+
+@media(max-width: 767px) {
+  .project_active .slick-arrow i {
+    font-size: 18px;
+    color: red;
+  }
 }
 
 .project_active .slick-arrow i {
-  font-size: 18px;
-  color: #646F87;
+  font-size: 28px;
+  color: #272727;
   line-height: 24px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -1473,8 +1526,11 @@ p {
 }
 
 .project_active .slick-arrow.next {
-  right: auto;
-  left: 50%;
+  right: 0;
+}
+
+.project_active .slick-arrow.prev {
+  left: 0;
 }
 
 .project_active .slick-arrow:hover i {
@@ -1482,7 +1538,7 @@ p {
 }
 
 /*===========================
-       06.PRICING css 
+       06.PRICING css
 ===========================*/
 .pricing_area {
   position: relative;
@@ -1581,7 +1637,7 @@ p {
 }
 
 /*===========================
-     07.TESTIMONIAL css 
+     07.TESTIMONIAL css
 ===========================*/
 .single_testimonial .testimonial_author img {
   border-radius: 50px;
@@ -1688,7 +1744,7 @@ p {
 }
 
 /*===========================
-     08.COUNTER css 
+     08.COUNTER css
 ===========================*/
 .single_counter .counter_icon i {
   color: #293651;
@@ -1726,7 +1782,7 @@ p {
 }
 
 /*===========================
-   09.WORK EXPERIENCE css 
+   09.WORK EXPERIENCE css
 ===========================*/
 .work_experience {
   position: relative;
@@ -1926,7 +1982,7 @@ p {
 }
 
 /*===========================
-   10.CALL TO ACTION css 
+   10.CALL TO ACTION css
 ===========================*/
 .call_to_action_wrapper {
   padding-top: 120px;
@@ -2055,7 +2111,7 @@ p {
 }
 
 /*===========================
-      11.FOOTER css 
+      11.FOOTER css
 ===========================*/
 .footer_content .footer_social {
   margin-top: 45px;
