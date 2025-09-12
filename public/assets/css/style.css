@@ -986,41 +986,56 @@ p {
   padding-top: 70px;
 }
 
-.header_social {
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  left: 50px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border: 1px solid rgba(0, 167, 142, 0.21);
+
+
+.social_content {
+  margin-right: 10px;
+  border: 0.5px solid rgba(69, 67, 67, 0.221);
   border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.header_social:hover {
-  border: 1px solid rgba(0, 167, 142, 0.666);
-  background-color: rgba(144, 216, 215, 0.347);
+.header_nav_social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media(min-width: 768px) {
   .header_social {
-    left: 20px;
+    margin: 0px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 1px solid rgba(62, 67, 66, 0.204);
+    border-radius: 50px;
+    background-color: #ffffffa2;
+    opacity: 0.5;
+  }
+
+  .header_social:hover {
+    opacity: 1;
+    background-color: #ffffff;
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header_social {
-    left: 20px;
-  }
-}
+
+
 
 .header_social li {
   font-size: 18px;
-  padding: 20px 15px;
+  padding: 10px 10px;
   color: rgba(100, 111, 135, 0.58);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -1033,7 +1048,7 @@ p {
 
 .header_social li a {
   font-size: 18px;
-  padding: 20px 15px;
+  padding: 15px 15px;
   color: rgba(100, 111, 135, 0.58);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -1136,6 +1151,14 @@ p {
 .header_hero_content .main-btn {
   margin-top: 30px;
 }
+
+/* 
+.header_left {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border: 1px solid red
+} */
 
 .header_hero_image img {
   width: 100%;
