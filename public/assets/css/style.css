@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -688,7 +692,28 @@ p {
   top: -7px;
 }
 
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* width: 100%; */
+    background-color: #fff;
+    z-index: 9;
+    -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    height: calc(100vh - 70px);
+    background-color: #fff;
+  }
+
   .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -702,19 +727,8 @@ p {
   }
 }
 
-@media (max-width: 767px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 9;
-    -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
-  }
-}
+
+
 
 .navbar-nav .nav-item {
   margin-left: 45px;
@@ -728,6 +742,7 @@ p {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   .navbar-nav .nav-item {
     padding: 15px 15px;
     margin: 0px;
@@ -736,6 +751,8 @@ p {
 }
 
 @media (max-width: 767px) {
+
+
   .navbar-nav .nav-item {
     padding: 15px 15px;
     margin: 0px;
@@ -2328,4 +2345,9 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.menu-container {
+  background-color: red;
+  height: 100%;
 }

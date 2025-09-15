@@ -43,10 +43,12 @@ $(function () {
 
   $(".navbar-toggler").on("click", function () {
     $(this).toggleClass("active");
+    $("body").toggleClass("disable-scroll");
   });
 
   $(".navbar-nav a").on("click", function () {
     $(".navbar-toggler").removeClass("active");
+    $("body").removeClass("disable-scroll");
   });
 
   ///===== Progress Bar
