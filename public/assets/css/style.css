@@ -8,8 +8,10 @@ body {
   overflow-x: hidden;
 }
 
-.disable-scroll {
-  overflow: hidden;
+@media (max-width: 767px) {
+  .disable-scroll {
+    overflow: hidden;
+  }
 }
 
 * {
