@@ -73,11 +73,11 @@ export type UiKeys =
 
 export const ui: Record<string, Record<UiKeys, any>> = {
   en: {
-    "nav.about_us": "About Us",
+    "nav.about_us": "About Me",
     "nav.home": "Home",
-    "nav.contact_us": "Contact Us",
+    "nav.contact_us": "Contact Me",
     "nav.portfolio": "Portfolio",
-    "nav.service": "Service",
+    "nav.service": "Services",
     "nav.experience": "Experience",
     "nav.project": "Projects",
 
@@ -400,7 +400,7 @@ export const ui: Record<string, Record<UiKeys, any>> = {
     x: "",
   },
   vi: {
-    "nav.about_us": "Về chúng tôi",
+    "nav.about_us": "Về tôi",
     "nav.home": "Trang chủ",
     "nav.contact_us": "Liên hệ",
     "nav.portfolio": "Dự án",

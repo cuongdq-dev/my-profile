@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { Images } from "../components/Images";
 import TranslationScript from "../components/TranslationScript.astro";
 import { defaultLang } from "../utils/ui";
 
@@ -56,7 +57,7 @@ if (!lang) {
     <link rel="stylesheet" href="assets/css/default.css" />
 
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.scss" />
     <link rel="stylesheet" href="assets/css/animation.css" />
   </head>
   <body>
@@ -119,5 +120,10 @@ if (!lang) {
 
     <!--====== Main js ======-->
     <script type="text/javascript" src="/assets/js/main.js"></script>
+
+    <!--====== Lotties js ======-->
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
   </body>
 </html>
