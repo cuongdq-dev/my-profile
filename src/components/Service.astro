@@ -1,0 +1,58 @@
+---
+import { getTranslation } from "../utils/ui";
+import {
+  ApiCard,
+  BackendCard,
+  DatabaseCard,
+  DevopsCard,
+  FrontendCard,
+  FullstackCard,
+} from "./services";
+---
+
+<section id="services" class="services_area pt-115 pb-120">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section_title text-center pb-30">
+          <h5
+            data-i18n={getTranslation("services.sub_title")}
+            class="sub_title"
+          >
+          </h5>
+          <h3
+            data-i18n={getTranslation("services.main_title")}
+            class="main_title"
+          >
+          </h3>
+          <ul class="line">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <FrontendCard />
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <BackendCard />
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <FullstackCard />
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <ApiCard />
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <DatabaseCard />
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <DevopsCard />
+      </div>
+    </div>
+  </div>
+</section>

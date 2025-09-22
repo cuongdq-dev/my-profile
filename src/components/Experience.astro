@@ -1,0 +1,32 @@
+---
+import { getTranslation } from "../utils/ui";
+import { ExperienceList } from "./experiences";
+---
+
+<section id="work" class="work_experience_area pt-115">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section_title text-center pb-30">
+          <h5
+            data-i18n={getTranslation("experience.sub_title")}
+            class="sub_title"
+          >
+          </h5>
+          <h3
+            class="main_title"
+            data-i18n={getTranslation("experience.main_title")}
+          >
+          </h3>
+          <ul class="line">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ExperienceList client:load />
+  </div>
+</section>

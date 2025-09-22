@@ -1,0 +1,29 @@
+---
+import { getTranslation } from "../utils/ui";
+import { ProjectList } from "./project";
+---
+
+<section id="project" class="project_area pt-80">
+  <div class="container project-container">
+    <div class="row justify-content-center">
+      <div class="col-sm-9">
+        <div class="section_title text-center pb-30">
+          <h5 data-i18n={getTranslation("project.sub_title")} class="sub_title">
+          </h5>
+
+          <h3
+            data-i18n={getTranslation("project.main_title")}
+            class="main_title"
+          >
+          </h3>
+          <ul class="line">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ProjectList client:load />
+  </div>
+</section>

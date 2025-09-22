@@ -15,28 +15,19 @@ $(function () {
     autoplay: true,
     pauseOnHover: true,
 
-    draggable: true, // Cho phép kéo bằng chuột
-    swipe: true, // Cho phép vuốt trên mobile
-    touchMove: true, // Vuốt sẽ trượt theo ngón tay
+    draggable: true,
+    swipe: true,
+    touchMove: true,
     swipeToSlide: true,
     cssEase: "linear",
 
-    // center:
     centerMode: true,
-    adaptiveHeight: false, // bật true nếu slide có chiều cao khác nhau và bạn muốn track thay đổi
+    adaptiveHeight: false,
     centerPadding: "10px",
     responsive: [
       {
         breakpoint: 991,
-        settings: { speed: 800, slidesToShow: 2, centerMode: false },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          centerMode: false,
-          centerPadding: "30px",
-          slidesToShow: 1,
-        },
+        settings: { speed: 800, slidesToShow: 1, centerMode: false },
       },
     ],
   });
