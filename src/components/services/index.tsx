@@ -15,7 +15,7 @@ export const ServiceCard = ({
   return (
     <div
       id={title}
-      className="card-animation-1 mt-30 wow fadeInUpBig"
+      className="card-animation-1 wow fadeInUpBig"
       data-wow-duration="1.3s"
       data-wow-delay="0.2s"
     >
