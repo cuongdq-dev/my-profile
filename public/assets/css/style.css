@@ -1072,36 +1072,9 @@ p {
     }
   }
 
-  .header_social>* {
-    border: 1px solid red;
-    animation: scale-sync 2s infinite alternate;
-  }
-
-  @keyframes scale-sync {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.5);
-    }
-
-    /* scale nhẹ khi ánh sáng ở giữa */
-    100% {
-      transform: scale(1);
-    }
-  }
-
-
   /* khi hover thì dừng shine */
   .header_hero:hover .header_social::before {
     display: none;
-  }
-
-  .header_hero:hover .header_social>* {
-    animation: none;
-    transform: scale(1);
-    /* reset */
   }
 }
 
@@ -1580,7 +1553,7 @@ p {
   }
 
   .project_active .slick-track {
-    margin: unset
+    margin: unset;
   }
 
   .project_active .slick-arrow i {
@@ -1599,7 +1572,6 @@ p {
     transform: scale(0.8);
   }
 }
-
 
 /*===========================
        06.PRICING css
